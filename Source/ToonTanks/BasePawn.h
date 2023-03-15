@@ -21,9 +21,17 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY()
 	class UCapsuleComponent* CapsuleComp; // class forward declaration, the header file is included in the Pawn.h file, include it in the basePawn.cpp
 
+	UPROPERTY()
+	UStaticMeshComponent* BaseMesh; // include default by actors , pawn is actor as well
+
+	UPROPERTY()
+	UStaticMeshComponent* TurrentMesh;
+
+	UPROPERTY()
+	USceneComponent* ProjectileSpawnPoint;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
