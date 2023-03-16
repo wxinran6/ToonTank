@@ -16,6 +16,15 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
+	UPROPERTY(VisibleAnywhere)
+	int32 VisbibleAnywhereInt = 100;
+
+	UPROPERTY(EditAnywhere)
+	int32 EditAnywhereint = 22;
+
+	UPROPERTY(VisibleInstanceOnly)
+	int32 VisibleInstanceInt = 20;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
