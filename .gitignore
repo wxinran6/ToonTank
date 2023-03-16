@@ -1,5 +1,9 @@
 Config
-Content/*
+Content/Assets
+Content/Blueprints
+Content/Collections
+Content/Developers
+Content/Maps
 Binaries
 DerivedDataCache
 Intermediate
