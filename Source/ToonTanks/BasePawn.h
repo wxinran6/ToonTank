@@ -16,31 +16,29 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
-	UPROPERTY(VisibleAnywhere)
-	int32 VisbibleAnywhereInt = 100;
 
-	UPROPERTY(EditAnywhere)
-	int32 EditAnywhereint = 22;
-
-	UPROPERTY(VisibleInstanceOnly)
-	int32 VisibleInstanceInt = 20;
-	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComp; // class forward declaration, the header file is included in the Pawn.h file, include it in the basePawn.cpp
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* BaseMesh; // include default by actors , pawn is actor as well
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* TurrentMesh;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawnPoint;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
+	int32 EditAnywhere = 100; // a way to make a private variable accessible from blueprint
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
