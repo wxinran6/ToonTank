@@ -14,3 +14,17 @@ ATank::ATank()
     camera->SetupAttachment(springArm);
 
 }
+
+void ATank::Move(float value)
+{
+    UE_LOG(LogTemp, Warning, TEXT("Value: %f"), value);
+}
+
+// Called to bind functionality to input
+void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent); // ABasePawn will call its superclass version function
+
+    PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &ATank::Move);
+
+}
