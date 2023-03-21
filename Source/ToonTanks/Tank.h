@@ -28,5 +28,8 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* camera;
 
-	 void Move(float Value);
+	UPROPERTY(EditAnywhere)
+	float Speed = 200.f;
+	
+	void Move(float Value);
 };
