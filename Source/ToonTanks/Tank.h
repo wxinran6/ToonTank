@@ -19,6 +19,12 @@ public:
 	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	virtual void Tick(float DeltaTime) override;
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 
 private:
 
@@ -36,4 +42,6 @@ private:
 	void Move(float Value);
 	
 	void Turn(float Value);
+
+	APlayerController* PlayerControllerRef;
 };

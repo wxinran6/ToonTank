@@ -17,10 +17,6 @@ public:
 	ABasePawn();
 
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComp; // class forward declaration, the header file is included in the Pawn.h file, include it in the basePawn.cpp
@@ -39,9 +35,7 @@ private:
 	int32 EditAnywhere = 100; // a way to make a private variable accessible from blueprint
 
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+
 
 
 
