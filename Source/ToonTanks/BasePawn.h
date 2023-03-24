@@ -35,7 +35,8 @@ private:
 	int32 EditAnywhere = 100; // a way to make a private variable accessible from blueprint
 
 
-
+protected:
+	void RotateTurrent(FVector LookAtTarget);
 
 
 
