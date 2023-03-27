@@ -23,5 +23,4 @@ void ATower::BeginPlay()
 
     Tank = Cast<ATank>(UGameplayStatics::GetPlayerPawn(this, 0));
 
-
 }
