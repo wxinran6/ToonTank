@@ -34,6 +34,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	int32 EditAnywhere = 100; // a way to make a private variable accessible from blueprint
 
+	UPROPERTY(EditDefaultsOnly, Category="Combat")
+	TSubclassOf<class AProjectile> ProjectileClass;
+
 
 protected:
 	void RotateTurrent(FVector LookAtTarget);
