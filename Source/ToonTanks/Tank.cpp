@@ -17,7 +17,7 @@ ATank::ATank()
 
 void ATank::Move(float value)
 {
-    UE_LOG(LogTemp, Warning, TEXT("Value: %f"), value);
+    // UE_LOG(LogTemp, Warning, TEXT("Value: %f"), value);
     FVector DeltaLocation = FVector::ZeroVector;
 	DeltaLocation.X = value * Speed * UGameplayStatics::GetWorldDeltaSeconds(this);
 	AddActorLocalOffset(DeltaLocation,true);
@@ -25,7 +25,7 @@ void ATank::Move(float value)
 
 void ATank::Turn(float value)
 {
-    UE_LOG(LogTemp, Warning, TEXT("Value: %f"), value);
+    // UE_LOG(LogTemp, Warning, TEXT("Value: %f"), value);
     FRotator DeltaLocation = FRotator::ZeroRotator;
     // Yaw = Value* Speed * deltatime
 	DeltaLocation.Yaw = value * TurnRate * UGameplayStatics::GetWorldDeltaSeconds(this);
