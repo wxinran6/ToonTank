@@ -16,7 +16,8 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
-
+	void HandleDestruction();
+	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Super Category Variable", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComp; // class forward declaration, the header file is included in the Pawn.h file, include it in the basePawn.cpp
