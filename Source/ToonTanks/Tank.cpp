@@ -49,7 +49,7 @@ void ATank::BeginPlay()
 	Super::BeginPlay();
 	
     TankPlayerController = Cast<APlayerController>(GetController()); // cast in unreal engine
-    DrawDebugSphere(GetWorld(), GetActorLocation()+ FVector(0.f,0.f,200.f), 100.f, 12, FColor::Red, true,  30.f);
+    // DrawDebugSphere(GetWorld(), GetActorLocation()+ FVector(0.f,0.f,200.f), 100.f, 12, FColor::Red, true,  30.f);
 }
 
 // Called every frame
@@ -71,6 +71,7 @@ void ATank::HandleDestruction()
     Super::HandleDestruction();
     SetActorHiddenInGame(true);
     SetActorTickEnabled(false);
+    bAlive = false;
 }
 
 APlayerController* ATank::GetTankPlayerController() const
